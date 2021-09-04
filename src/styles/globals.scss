@@ -1,0 +1,48 @@
+html,
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p {
+  line-height: 2;
+  margin: 0px 0px 1.7em;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html,
+html a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+li,
+dl,
+th,
+dt,
+input,
+textarea,
+span,
+div {
+  -webkit-font-smoothing: antialiased;
+}
