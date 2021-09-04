@@ -1,12 +1,24 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
+
+import thumbnail from "./api/thumbnail";
+import { getAllPosts } from "./api/posts";
+
 import styles from "../styles/pages/Home.module.scss";
 
 import Header from "../components/header";
 import Post from "../components/post";
 
-const Home: NextPage = () => {
+interface HomeProps {
+  posts: Array<{
+    slug: string;
+    title: string;
+    description: string;
+    thumbnailUrl: string;
+  }>;
+}
+
+export default function Home(props: HomeProps) {
   return (
     <>
       <Head>
@@ -18,14 +30,26 @@ const Home: NextPage = () => {
       <Header />
 
       <main className={styles.container}>
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
+        {props.posts.map((post, idx) => (
+          <Post
+            key={idx}
+            postLink={post.slug}
+            title={post.title}
+            description={post.description}
+            thumbnailUrl={post.thumbnailUrl}
+          />
+        ))}
       </main>
     </>
   );
-};
+}
 
-export default Home;
+export async function getStaticProps() {
+  const allPosts = await getAllPosts();
+
+  return {
+    props: {
+      posts: allPosts,
+    },
+  };
+}
