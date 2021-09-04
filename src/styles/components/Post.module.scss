@@ -1,5 +1,6 @@
 @import "../extras/mixins";
-@import "../extras/utils";
+
+// Use: @include media(md) { max-width: 900px; } to create animated post on hover
 
 .post {
   display: flex;
