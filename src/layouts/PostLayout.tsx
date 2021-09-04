@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
 import thumbnail from "../pages/api/thumbnail";
+import styles from "../styles/layouts/Post.module.scss";
 
 interface PostLayoutProps {
   title: string;
@@ -36,7 +37,9 @@ export default function PostLayout(props: PostLayoutProps) {
       <article>
         <h1>{props.title}</h1>
         <img width="600" src={props.thumbnailUrl} alt={props.title} />
-        <div dangerouslySetInnerHTML={{ __html: props.content }} />
+        <article className={styles.container}>
+          <div dangerouslySetInnerHTML={{ __html: props.content }} />
+        </article>
       </article>
     </main>
   );
