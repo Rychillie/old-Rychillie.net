@@ -39,7 +39,7 @@
 .profileImage {
   width: 180px;
   height: 180px;
-  padding: 30px;
+  padding: 16px;
   border-radius: 50%;
   margin: 0px auto;
   border: 1px solid rgb(237, 237, 237);
@@ -47,6 +47,7 @@
   margin-bottom: 20px;
 
   @include media(sm) {
+    padding: 32px;
     width: 270px;
     height: 270px;
     padding: 20px;
