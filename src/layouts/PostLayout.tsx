@@ -3,6 +3,8 @@ import Head from "next/head";
 import thumbnail from "../pages/api/thumbnail";
 import styles from "../styles/layouts/Post.module.scss";
 
+import NavBar from "../components/navbar";
+
 interface PostLayoutProps {
   title: string;
   description: string;
@@ -35,6 +37,7 @@ export default function PostLayout(props: PostLayoutProps) {
         <meta name="twitter:image" content={props.thumbnailUrl} />
       </Head>
       <article>
+        <NavBar />
         <h1>{props.title}</h1>
         <img width="600" src={props.thumbnailUrl} alt={props.title} />
         <article className={styles.container}>
