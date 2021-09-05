@@ -1,6 +1,5 @@
 @import "../extras/mixins";
-
-// Use: @include media(sm) { max-width: 900px; } to create animated post on hover
+@import "../variables.scss";
 
 .post {
   display: flex;
@@ -72,7 +71,7 @@
         width: 100%;
         height: 100%;
         line-height: 1;
-        color: rgb(41, 41, 41);
+        color: $light;
         height: auto;
 
         &.month {
@@ -109,7 +108,7 @@
     margin-right: 30px;
     font-size: 14px;
     font-weight: 400;
-    color: rgb(209, 0, 104);
+    color: $pink;
     line-height: 1;
     margin-bottom: 0;
   }
@@ -119,12 +118,12 @@
   font-size: 21px;
   font-weight: 700;
   margin-bottom: 10px;
-  color: rgb(41, 41, 41);
+  color: $light;
 }
 
 .postDescription {
   font-size: 14px;
-  color: rgb(41, 41, 41);
+  color: $light;
   line-height: 2;
   margin-bottom: 0px;
 }
@@ -133,7 +132,7 @@
   margin-top: 10px;
   font-size: 14px;
   font-weight: 600;
-  color: rgb(41, 41, 41);
+  color: $light;
   margin-bottom: 0;
   line-height: 1.5;
 }
