@@ -36,14 +36,14 @@ export default function PostLayout(props: PostLayoutProps) {
         <meta name="twitter:description" content={props.description} />
         <meta name="twitter:image" content={props.thumbnailUrl} />
       </Head>
-      <article>
+      <div className={styles.postLayout}>
         <NavBar />
         <h1>{props.title}</h1>
         <img width="600" src={props.thumbnailUrl} alt={props.title} />
         <article className={styles.container}>
           <div dangerouslySetInnerHTML={{ __html: props.content }} />
         </article>
-      </article>
+      </div>
     </main>
   );
 }

@@ -20,10 +20,6 @@ This note **demonstrates** some of what [Markdown][1] is _capable of doing_.
 
 And that's how to do it.
 
-{% highlight html %}
-This note **demonstrates** some of what [Markdown][some/link] is _capable of doing_.
-{% endhighlight %}
-
 ---
 
 ## Headings
@@ -38,8 +34,6 @@ There are six levels of headings. They correspond with the six levels of HTML he
 
 #### Headings can be small
 
-{% highlight raw %}
-
 # Heading
 
 ## Heading
@@ -47,8 +41,6 @@ There are six levels of headings. They correspond with the six levels of HTML he
 ### Heading
 
 #### Heading
-
-{% endhighlight %}
 
 ---
 
@@ -60,12 +52,9 @@ There are six levels of headings. They correspond with the six levels of HTML he
 2. A second item
 3. Number 3
 
-{% highlight raw %}
-
-1. Item 1
-2. A second item
-3. Number 3
-   {% endhighlight %}
+4. Item 1
+5. A second item
+6. Number 3
 
 ### Unordered list
 
@@ -74,13 +63,10 @@ There are six levels of headings. They correspond with the six levels of HTML he
 - Yet another item
 - And there's more...
 
-{% highlight raw %}
-
 - An item
 - Another item
 - Yet another item
 - And there's more...
-  {% endhighlight %}
 
 ---
 
@@ -90,10 +76,7 @@ There are six levels of headings. They correspond with the six levels of HTML he
 
 > Here is a quote. What this is should be self explanatory. Quotes are automatically indented when they are used.
 
-{% highlight raw %}
-
 > Here is a quote. What this is should be self explanatory.
-> {% endhighlight raw %}
 
 ---
 
@@ -105,12 +88,9 @@ URLs can be made in a handful of ways:
 - Another named link to [Mark It Down](https://google.com/)
 - Sometimes you just want a URL like <https://google.com/>.
 
-{% highlight raw %}
-
 - A named link to [MarkItDown][3].
 - Another named link to [MarkItDown](https://google.com/)
 - Sometimes you just want a URL like <https://google.com/>.
-  {% endhighlight %}
 
 ---
 
@@ -119,39 +99,23 @@ URLs can be made in a handful of ways:
 A horizontal rule is a line that goes across the middle of the page.
 It's sometimes handy for breaking things up.
 
-## {% highlight raw %}
-
-{% endhighlight %}
-
 ---
 
 ## Images
 
 Markdown can also contain images. I'll need to add something here sometime.
 
-{% highlight raw %}
-![Markdowm Image][/image/url]
-{% endhighlight %}
-
 ![Markdowm Image][5]
 
 _Figure Caption_?
 
-{% highlight raw %}
 ![Markdowm Image][/image/url]
-
-<figcaption class="caption">Photo by John Doe</figcaption>
-{% endhighlight %}
 
 ![Markdowm Image][5]
 
 <figcaption class="caption">Photo by John Doe</figcaption>
 
 _Bigger Images_?
-
-{% highlight raw %}
-![Markdowm Image][/image/url]{: class="bigger-image" }
-{% endhighlight %}
 
 ![Markdowm Image][5]{: class="bigger-image" }
 
@@ -160,54 +124,6 @@ _Bigger Images_?
 ## Code
 
 A HTML Example:
-
-{% highlight html %}
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Just a test</h1>
-</body>
-</html>
-{% endhighlight %}
-
-A CSS Example:
-
-{% highlight css %}
-pre {
-padding: 10px;
-font-size: .8em;
-white-space: pre;
-}
-
-pre, table {
-width: 100%;
-}
-
-code, pre, tt {
-font-family: Monaco, Consolas, Inconsolata, monospace, sans-serif;
-background: rgba(0,0,0,.05);
-}
-{% endhighlight %}
-
-A JS Example:
-
-{% highlight js %}
-// Sticky Header
-$(window).scroll(function() {
-
-    if ($(window).scrollTop() > 900 && !$("body").hasClass('show-menu')) {
-        $('#hamburguer__open').fadeOut('fast');
-    } else if (!$("body").hasClass('show-menu')) {
-        $('#hamburguer__open').fadeIn('fast');
-    }
-
-});
-{% endhighlight %}
 
 [1]: https://daringfireball.net/projects/markdown/
 [2]: https://www.fileformat.info/info/unicode/char/2163/index.htm
