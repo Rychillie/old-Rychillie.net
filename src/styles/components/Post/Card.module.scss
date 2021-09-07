@@ -1,5 +1,5 @@
-@import "../extras/mixins";
-@import "../variables.scss";
+@import "../../extras/mixins";
+@import "../../variables.scss";
 
 .post {
   display: flex;
@@ -94,24 +94,6 @@
 .postDetails {
   display: flex;
   flex-direction: column;
-}
-
-.postTags {
-  display: flex;
-  flex-wrap: wrap;
-  -webkit-box-align: center;
-  align-items: center;
-  margin-bottom: 0;
-
-  p {
-    display: block;
-    margin-right: 30px;
-    font-size: 14px;
-    font-weight: 400;
-    color: $pink;
-    line-height: 1;
-    margin-bottom: 10px;
-  }
 }
 
 .postTitle {

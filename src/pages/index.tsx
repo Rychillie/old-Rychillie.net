@@ -8,7 +8,7 @@ import styles from "../styles/pages/Home.module.scss";
 
 import NavBar from "../components/navbar";
 import Header from "../components/header";
-import Post from "../components/post";
+import Card from "../components/post/card";
 
 interface HomeProps {
   posts: Array<{
@@ -34,21 +34,16 @@ export default function Home(props: HomeProps) {
       <Header />
 
       <main className={styles.container}>
-        {props.posts.map(
-          (post, idx) => (
-            console.log(post),
-            (
-              <Post
-                key={idx}
-                postLink={post.slug}
-                title={post.title}
-                description={post.description}
-                thumbnailUrl={post.thumbnailUrl}
-                tags={post.tags}
-              />
-            )
-          )
-        )}
+        {props.posts.map((post, idx) => (
+          <Card
+            key={idx}
+            postLink={post.slug}
+            title={post.title}
+            description={post.description}
+            thumbnailUrl={post.thumbnailUrl}
+            tags={post.tags}
+          />
+        ))}
       </main>
     </>
   );

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import styles from "../styles/components/Post.module.scss";
+import styles from "../../styles/components/Post/Card.module.scss";
 
 interface LinkProps {
   description: string;
@@ -10,7 +10,9 @@ interface LinkProps {
   tags: string[];
 }
 
-const Post = (props: LinkProps): JSX.Element => {
+import TagsList from "./tagsList";
+
+const Card = (props: LinkProps): JSX.Element => {
   return (
     <Link href={props.postLink}>
       <a className={styles.post}>
@@ -34,13 +36,7 @@ const Post = (props: LinkProps): JSX.Element => {
           </div>
         </div>
         <div className={styles.postDetails}>
-          <div className={styles.postTags}>
-            {props.tags.map((tag) => (
-              <p key={tag} className={styles.tag}>
-                {tag}
-              </p>
-            ))}
-          </div>
+          <TagsList tags={props.tags} />
           <h2 className={styles.postTitle}>{props.title}</h2>
           <p className={styles.postDescription}>{props.description}</p>
           <Link href={props.postLink}>
@@ -52,4 +48,4 @@ const Post = (props: LinkProps): JSX.Element => {
   );
 };
 
-export default Post;
+export default Card;
