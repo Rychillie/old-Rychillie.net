@@ -16,6 +16,7 @@ interface HomeProps {
     title: string;
     description: string;
     thumbnailUrl: string;
+    tags: string[];
   }>;
 }
 
@@ -33,15 +34,21 @@ export default function Home(props: HomeProps) {
       <Header />
 
       <main className={styles.container}>
-        {props.posts.map((post, idx) => (
-          <Post
-            key={idx}
-            postLink={post.slug}
-            title={post.title}
-            description={post.description}
-            thumbnailUrl={post.thumbnailUrl}
-          />
-        ))}
+        {props.posts.map(
+          (post, idx) => (
+            console.log(post),
+            (
+              <Post
+                key={idx}
+                postLink={post.slug}
+                title={post.title}
+                description={post.description}
+                thumbnailUrl={post.thumbnailUrl}
+                tags={post.tags}
+              />
+            )
+          )
+        )}
       </main>
     </>
   );

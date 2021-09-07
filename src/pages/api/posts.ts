@@ -23,6 +23,7 @@ export async function getAllPosts() {
       slug: post.replace(".md", ""),
       title: meta.data.title,
       description: meta.data.description,
+      tags: meta.data.tag,
       thumbnailUrl,
     });
   }
@@ -48,6 +49,7 @@ export async function getPostBySlug(slug) {
   return {
     title: meta.data.title,
     description: meta.data.description,
+    tags: meta.data.tag,
     thumbnailUrl,
     content,
   };

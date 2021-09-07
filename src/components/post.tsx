@@ -7,6 +7,7 @@ interface LinkProps {
   thumbnailUrl: string;
   postLink: string;
   title: string;
+  tags: string[];
 }
 
 const Post = (props: LinkProps): JSX.Element => {
@@ -34,9 +35,11 @@ const Post = (props: LinkProps): JSX.Element => {
         </div>
         <div className={styles.postDetails}>
           <div className={styles.postTags}>
-            <p>#react</p>
-            <p>#js</p>
-            <p>#markdown</p>
+            {props.tags.map((tag) => (
+              <p key={tag} className={styles.tag}>
+                {tag}
+              </p>
+            ))}
           </div>
           <h2 className={styles.postTitle}>{props.title}</h2>
           <p className={styles.postDescription}>{props.description}</p>
