@@ -87,6 +87,10 @@
       height: 170px;
       position: absolute;
       top: -100%;
+
+      img {
+        object-fit: cover;
+      }
     }
   }
 }
