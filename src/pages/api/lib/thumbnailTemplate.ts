@@ -46,7 +46,7 @@ export function getHtml({ title, thumbnail_bg = "#8257e5" }: GetHtmlProps) {
             font-size: 62px;
             line-height: 80px;
 
-            max-width: 80%;
+            max-width: 45%;
           }
         </style>
       </head>
