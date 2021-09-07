@@ -6,9 +6,17 @@
   margin-top: 64px;
   margin-bottom: 64px;
   background-color: rgba($primary, 0.025);
-  border-radius: 8px;
-  padding: 64px;
+  border-radius: 4px;
+  padding: 40px;
   width: 100%;
+
+  @include media(sm) {
+    padding: 48px;
+  }
+
+  @include media(lg) {
+    padding: 64px;
+  }
 
   .content {
     .submit {

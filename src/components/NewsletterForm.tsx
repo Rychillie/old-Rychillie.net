@@ -5,6 +5,13 @@ const NewsLetter = () => {
   return (
     <div className={styles.container}>
       <div className={styles.form}>
+        <h2>
+          Receba noticias de Desenvolvimento e Design na sua caixa de entrada
+        </h2>
+        <p>
+          Assine nossa Newsletter e receba toda semana conteúdo novo e
+          atualizado.
+        </p>
         <form
           action="https://app.convertkit.com/forms/2584382/subscriptions"
           method="post"
