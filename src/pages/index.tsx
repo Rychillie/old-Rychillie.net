@@ -9,6 +9,7 @@ import styles from "../styles/pages/Home.module.scss";
 import NavBar from "../components/navbar";
 import Header from "../components/header";
 import Card from "../components/post/card";
+import NewsLetter from "../components/NewsletterForm";
 
 interface HomeProps {
   posts: Array<{
@@ -48,6 +49,8 @@ export default function Home(props: HomeProps) {
           />
         ))}
       </main>
+
+      <NewsLetter />
     </>
   );
 }
