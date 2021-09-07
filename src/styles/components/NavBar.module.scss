@@ -23,6 +23,14 @@
     line-height: 32px;
     font-weight: 700;
   }
+
+  @include media(md) {
+    height: 80px;
+  }
+
+  @include media(lg) {
+    height: 96px;
+  }
 }
 
 .navbarLinks {
