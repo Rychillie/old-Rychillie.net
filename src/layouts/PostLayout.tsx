@@ -4,23 +4,30 @@ import thumbnail from "../pages/api/thumbnail";
 import styles from "../styles/layouts/Post.module.scss";
 
 import NavBar from "../components/navbar";
+import TagsList from "../components/post/tagsList";
 
 interface PostLayoutProps {
   title: string;
   description: string;
   thumbnailUrl: string;
   content: string;
+  tags: string[];
 }
 
 export default function PostLayout(props: PostLayoutProps) {
   return (
-    <main>
+    <>
       <Head>
         <title>{props.title}</title>
+        <meta
+          name="description"
+          content={`${props.description} | rychillie.net`}
+        />
+        <link rel="icon" href="/favicon.ico" />
 
         <meta name="description" content={props.description} />
 
-        <meta property="og:site_name" content="Blog do Diego" />
+        <meta property="og:site_name" content="🦄 Rychillie" />
 
         <meta property="og:title" content={props.title} />
         <meta property="og:description" content={props.description} />
@@ -36,14 +43,38 @@ export default function PostLayout(props: PostLayoutProps) {
         <meta name="twitter:description" content={props.description} />
         <meta name="twitter:image" content={props.thumbnailUrl} />
       </Head>
-      <div className={styles.postLayout}>
+      <>
         <NavBar />
-        <h1>{props.title}</h1>
-        <img width="600" src={props.thumbnailUrl} alt={props.title} />
-        <article className={styles.container}>
-          <div dangerouslySetInnerHTML={{ __html: props.content }} />
-        </article>
-      </div>
-    </main>
+
+        <header className={styles.headerPost}>
+          <div className={styles.container}>
+            <h1>{props.title}</h1>
+
+            <TagsList tags={props.tags} />
+
+            <div className={styles.thumbnail}>
+              <img
+                width="1170"
+                src={props.thumbnailUrl}
+                alt={props.title}
+                loading="lazy"
+              />
+              <img
+                width="1170"
+                src={props.thumbnailUrl}
+                alt={props.title}
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </header>
+
+        <main className={styles.postLayout}>
+          <article className={styles.container}>
+            <div dangerouslySetInnerHTML={{ __html: props.content }} />
+          </article>
+        </main>
+      </>
+    </>
   );
 }

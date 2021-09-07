@@ -8,6 +8,7 @@ interface PostProps {
   description: string;
   thumbnailUrl: string;
   content: string;
+  tags: string[];
 }
 
 export default function Post(props: PostProps) {
@@ -17,6 +18,7 @@ export default function Post(props: PostProps) {
       description={props.description}
       thumbnailUrl={props.thumbnailUrl}
       content={props.content}
+      tags={props.tags}
     />
   );
 }
