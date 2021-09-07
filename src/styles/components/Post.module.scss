@@ -101,7 +101,7 @@
   flex-wrap: wrap;
   -webkit-box-align: center;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 0;
 
   p {
     display: block;
@@ -110,7 +110,7 @@
     font-weight: 400;
     color: $pink;
     line-height: 1;
-    margin-bottom: 0;
+    margin-bottom: 10px;
   }
 }
 
