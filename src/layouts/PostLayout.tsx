@@ -5,6 +5,7 @@ import styles from "../styles/layouts/Post.module.scss";
 
 import NavBar from "../components/navbar";
 import TagsList from "../components/post/tagsList";
+import NewsLetter from "../components/NewsletterForm";
 
 interface PostLayoutProps {
   title: string;
@@ -74,6 +75,8 @@ export default function PostLayout(props: PostLayoutProps) {
             <div dangerouslySetInnerHTML={{ __html: props.content }} />
           </article>
         </main>
+
+        <NewsLetter />
       </>
     </>
   );
