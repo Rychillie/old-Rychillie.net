@@ -2,7 +2,7 @@ module.exports = {
   reactStrictMode: true,
 
   images: {
-    domains: ["minimalist.vercel.app", "localhost"],
+    domains: ["rychillie.net", "localhost"],
   },
 
   target: "serverless",
