@@ -37,11 +37,52 @@
 }
 
 .postLayout {
-  code,
-  iframe {
-    overflow: auto;
-    display: block;
-    max-width: 100%;
+  display: flex;
+  flex-direction: row;
+
+  .socialShare {
+    display: none;
+
+    @include media(lg) {
+      display: flex;
+      margin-right: 16px;
+      flex-direction: column;
+      max-width: 96px;
+      width: 100%;
+
+      span {
+        font-size: 13px;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .article {
     width: 100%;
+
+    code,
+    iframe {
+      overflow: auto;
+      display: block;
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+
+  .sideMenu {
+    display: none;
+
+    @include media(lg) {
+      display: flex;
+      margin-left: 16px;
+      flex-direction: column;
+      max-width: 160px;
+      width: 100%;
+
+      span {
+        font-size: 13px;
+        font-weight: 600;
+      }
+    }
   }
 }

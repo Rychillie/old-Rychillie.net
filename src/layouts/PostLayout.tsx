@@ -70,10 +70,18 @@ export default function PostLayout(props: PostLayoutProps) {
           </div>
         </header>
 
-        <main className={styles.postLayout}>
-          <article className={styles.container}>
-            <div dangerouslySetInnerHTML={{ __html: props.content }} />
-          </article>
+        <main className={styles.container}>
+          <main className={styles.postLayout}>
+            <div className={styles.socialShare}>
+              <span>compartilhe</span>
+            </div>
+
+            <article className={styles.article}>
+              <div dangerouslySetInnerHTML={{ __html: props.content }} />
+            </article>
+
+            <div className={styles.sideMenu}></div>
+          </main>
         </main>
 
         <NewsLetter />
