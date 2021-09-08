@@ -12,7 +12,7 @@ export function getHtml({ title, thumbnail_bg = "#8257e5" }: GetHtmlProps) {
 
         <title>Thumbnail</title>
 
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
 
         <style>
           body {

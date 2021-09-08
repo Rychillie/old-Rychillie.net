@@ -13,7 +13,7 @@ export async function getAllPosts() {
     const baseUrl =
       process.env.NODE_ENV === "development"
         ? "http://localhost:3000"
-        : "https://minimalist.vercel.app";
+        : "https://rychillie.net";
 
     const thumbnailUrl = `${baseUrl}/api/thumbnail.png?title=${
       meta.data.title
