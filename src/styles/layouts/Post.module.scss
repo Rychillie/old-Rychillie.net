@@ -2,7 +2,15 @@
 
 .headerPost {
   margin-top: 24px;
-  margin-bottom: 72px;
+  margin-bottom: 32px;
+
+  @include media(sm) {
+    margin-bottom: 48px;
+  }
+
+  @include media(md) {
+    margin-bottom: 72px;
+  }
 
   h1 {
     margin-bottom: 16px;
@@ -12,10 +20,18 @@
 
   .thumbnail {
     position: relative;
+    margin-top: 16px;
     z-index: 0;
 
-    img {
+    @include media(sm) {
+      margin-top: 24px;
+    }
+
+    @include media(md) {
       margin-top: 48px;
+    }
+
+    img {
       border-radius: 4px;
 
       &:first-child {
