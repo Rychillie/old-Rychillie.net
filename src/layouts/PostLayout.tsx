@@ -52,21 +52,21 @@ export default function PostLayout(props: PostLayoutProps) {
             <h1>{props.title}</h1>
 
             <TagsList tags={props.tags} />
+          </div>
 
-            <div className={styles.thumbnail}>
-              <img
-                width="1170"
-                src={props.thumbnailUrl}
-                alt={props.title}
-                loading="lazy"
-              />
-              <img
-                width="1170"
-                src={props.thumbnailUrl}
-                alt={props.title}
-                loading="lazy"
-              />
-            </div>
+          <div className={styles.thumbnail}>
+            <img
+              width="1170"
+              src={props.thumbnailUrl}
+              alt={props.title}
+              loading="lazy"
+            />
+            <img
+              width="1170"
+              src={props.thumbnailUrl}
+              alt={props.title}
+              loading="lazy"
+            />
           </div>
         </header>
 

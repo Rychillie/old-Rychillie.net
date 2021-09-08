@@ -20,8 +20,12 @@
 
   .thumbnail {
     position: relative;
+    padding-left: 0;
+    padding-right: 0;
     margin-top: 16px;
     z-index: 0;
+
+    @extend .container;
 
     @include media(sm) {
       margin-top: 24px;
