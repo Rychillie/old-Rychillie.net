@@ -37,7 +37,7 @@ export async function getPostBySlug(slug) {
   const baseUrl =
     process.env.NODE_ENV === "development"
       ? "http://localhost:3000"
-      : "https://minimalist.vercel.app";
+      : "https://rychillie.net";
 
   const meta = matter(fileContent.default);
   const content = marked(meta.content);
@@ -52,5 +52,6 @@ export async function getPostBySlug(slug) {
     tags: meta.data.tag,
     thumbnailUrl,
     content,
+    slug,
   };
 }

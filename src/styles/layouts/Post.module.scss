@@ -1,4 +1,5 @@
 @import "../extras/utils";
+@import "../variables.scss";
 
 .headerPost {
   margin-top: 24px;
@@ -66,13 +67,40 @@
     @include media(lg) {
       display: flex;
       margin-right: 16px;
+      align-items: center;
       flex-direction: column;
+      margin-top: 8px;
       max-width: 96px;
       width: 100%;
 
       span {
         font-size: 13px;
         font-weight: 600;
+        text-align: center;
+      }
+
+      .socialShareButtons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 32px;
+
+        button {
+          & + button {
+            margin-top: 12px;
+          }
+
+          svg {
+            circle {
+              fill: $primary;
+            }
+
+            path {
+              fill: $black;
+            }
+          }
+        }
       }
     }
   }

@@ -3,6 +3,25 @@ import Head from "next/head";
 import thumbnail from "../pages/api/thumbnail";
 import styles from "../styles/layouts/Post.module.scss";
 
+import {
+  EmailIcon,
+  EmailShareButton,
+  FacebookIcon,
+  FacebookShareButton,
+  LinkedinIcon,
+  LinkedinShareButton,
+  PocketIcon,
+  PocketShareButton,
+  RedditIcon,
+  RedditShareButton,
+  TelegramIcon,
+  TelegramShareButton,
+  TwitterIcon,
+  TwitterShareButton,
+  WhatsappIcon,
+  WhatsappShareButton,
+} from "react-share";
+
 import NavBar from "../components/navbar";
 import TagsList from "../components/post/tagsList";
 import NewsLetter from "../components/NewsletterForm";
@@ -13,9 +32,12 @@ interface PostLayoutProps {
   thumbnailUrl: string;
   content: string;
   tags: string[];
+  slug: string;
 }
 
 export default function PostLayout(props: PostLayoutProps) {
+  const LinkPost = `https://rychillie.net/` + props.slug;
+
   return (
     <>
       <Head>
@@ -74,6 +96,33 @@ export default function PostLayout(props: PostLayoutProps) {
           <main className={styles.postLayout}>
             <div className={styles.socialShare}>
               <span>compartilhe</span>
+
+              <div className={styles.socialShareButtons}>
+                <EmailShareButton title={props.title} url={LinkPost}>
+                  <EmailIcon size={32} round />
+                </EmailShareButton>
+                <FacebookShareButton title={props.title} url={LinkPost}>
+                  <FacebookIcon size={32} round />
+                </FacebookShareButton>
+                <LinkedinShareButton title={props.title} url={LinkPost}>
+                  <LinkedinIcon size={32} round />
+                </LinkedinShareButton>
+                <PocketShareButton title={props.title} url={LinkPost}>
+                  <PocketIcon size={32} round />
+                </PocketShareButton>
+                <RedditShareButton title={props.title} url={LinkPost}>
+                  <RedditIcon size={32} round />
+                </RedditShareButton>
+                <TelegramShareButton title={props.title} url={LinkPost}>
+                  <TelegramIcon size={32} round />
+                </TelegramShareButton>
+                <TwitterShareButton title={props.title} url={LinkPost}>
+                  <TwitterIcon size={32} round />
+                </TwitterShareButton>
+                <WhatsappShareButton title={props.title} url={LinkPost}>
+                  <WhatsappIcon size={32} round />
+                </WhatsappShareButton>
+              </div>
             </div>
 
             <article className={styles.article}>
