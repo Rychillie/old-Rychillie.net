@@ -78,30 +78,6 @@
         font-weight: 600;
         text-align: center;
       }
-
-      .socialShareButtons {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        margin-top: 32px;
-
-        button {
-          & + button {
-            margin-top: 12px;
-          }
-
-          svg {
-            circle {
-              fill: $primary;
-            }
-
-            path {
-              fill: $black;
-            }
-          }
-        }
-      }
     }
   }
 
