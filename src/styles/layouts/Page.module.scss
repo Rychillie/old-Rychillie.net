@@ -1,0 +1,25 @@
+@import "../extras/utils";
+@import "../variables.scss";
+
+.headerPage {
+  margin-top: 24px;
+  margin-bottom: 24px;
+
+  @include media(sm) {
+    margin-bottom: 32px;
+  }
+
+  @include media(md) {
+    margin-bottom: 48px;
+  }
+
+  h1 {
+    font-size: 40px;
+    line-height: 1.5;
+  }
+}
+
+.pageLayout {
+  display: flex;
+  flex-direction: column;
+}

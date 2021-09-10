@@ -1,0 +1,14 @@
+.doubleContent {
+  display: flex;
+  flex: row;
+}
+
+.sideImage {
+  max-width: 360px;
+  position: relative;
+  width: 100%;
+}
+
+.sideContent {
+  margin-left: 40px;
+}
