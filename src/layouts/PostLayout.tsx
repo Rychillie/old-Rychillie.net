@@ -75,7 +75,7 @@ export default function PostLayout(props: PostLayoutProps) {
         </header>
 
         <main className={styles.container}>
-          <main className={styles.postLayout}>
+          <div className={styles.postLayout}>
             <div className={styles.socialShare}>
               <span>compartilhe</span>
 
@@ -87,7 +87,7 @@ export default function PostLayout(props: PostLayoutProps) {
             </article>
 
             <div className={styles.sideMenu}></div>
-          </main>
+          </div>
         </main>
 
         <NewsLetter />
