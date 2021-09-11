@@ -1,0 +1,67 @@
+@import "../extras/utils";
+@import "../extras/mixins";
+@import "../variables.scss";
+
+.doubleContent {
+  display: flex;
+  flex-direction: column;
+
+  @include media(md) {
+    flex-direction: row;
+  }
+}
+
+.sideImage {
+  position: relative;
+  width: 100%;
+
+  @include media(md) {
+    max-width: 360px;
+  }
+
+  .containerImage {
+    width: 100%;
+    min-width: 100%;
+
+    @include media(md) {
+      width: 360px;
+      position: sticky;
+      top: 80px;
+    }
+
+    @include media(lg) {
+      top: 96px;
+    }
+  }
+}
+
+.sideContent {
+  margin-top: 40px;
+  margin-left: 0;
+
+  @include media(md) {
+    margin-top: 0;
+    margin-left: 40px;
+  }
+
+  p {
+    ul,
+    li {
+      padding: revert;
+      margin: revert;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    a {
+      color: $pink;
+      opacity: 1;
+
+      &:hover {
+        opacity: 0.64;
+      }
+    }
+  }
+}
