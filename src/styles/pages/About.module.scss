@@ -1,14 +1,47 @@
+@import "../extras/utils";
+@import "../extras/mixins";
+
 .doubleContent {
   display: flex;
-  flex: row;
+  flex-direction: column;
+
+  @include media(md) {
+    flex-direction: row;
+  }
 }
 
 .sideImage {
-  max-width: 360px;
   position: relative;
   width: 100%;
+
+  @include media(md) {
+    max-width: 360px;
+  }
+
+  .containerImage {
+    @include media(md) {
+      position: sticky;
+      top: 80px;
+    }
+
+    @include media(lg) {
+      top: 96px;
+    }
+  }
 }
 
 .sideContent {
-  margin-left: 40px;
+  margin-top: 40px;
+  margin-left: 0;
+
+  @include media(md) {
+    margin-top: 0;
+    margin-left: 40px;
+  }
+
+  p {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }

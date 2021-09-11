@@ -22,19 +22,81 @@ export default function Home(props: AboutProps) {
     >
       <div className={styles.doubleContent}>
         <div className={styles.sideImage}>
-          <Image
-            src={"/rychillie_big.jpg"}
-            blurDataURL={"/rychillie_big.jpg"}
-            alt="Rychillie"
-            layout="responsive"
-            placeholder="blur"
-            quality={100}
-            width={360}
-            height={640}
-            loading="lazy"
-          />
+          <div className={styles.containerImage}>
+            <Image
+              src={"/rychillie_big.jpg"}
+              blurDataURL={"/rychillie_big.jpg"}
+              alt="Rychillie"
+              layout="responsive"
+              placeholder="blur"
+              quality={100}
+              width={360}
+              height={640}
+              loading="lazy"
+            />
+          </div>
         </div>
         <div className={styles.sideContent}>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum iusto
+            alias totam possimus odit tenetur cumque consequuntur. Et, illum!
+            Dolor, deserunt voluptatum accusantium enim architecto corrupti
+            fugit repellat eveniet. Sapiente!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum iusto
+            alias totam possimus odit tenetur cumque consequuntur. Et, illum!
+            Dolor, deserunt voluptatum accusantium enim architecto corrupti
+            fugit repellat eveniet. Sapiente!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum iusto
+            alias totam possimus odit tenetur cumque consequuntur. Et, illum!
+            Dolor, deserunt voluptatum accusantium enim architecto corrupti
+            fugit repellat eveniet. Sapiente!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum iusto
+            alias totam possimus odit tenetur cumque consequuntur. Et, illum!
+            Dolor, deserunt voluptatum accusantium enim architecto corrupti
+            fugit repellat eveniet. Sapiente!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum iusto
+            alias totam possimus odit tenetur cumque consequuntur. Et, illum!
+            Dolor, deserunt voluptatum accusantium enim architecto corrupti
+            fugit repellat eveniet. Sapiente!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum iusto
+            alias totam possimus odit tenetur cumque consequuntur. Et, illum!
+            Dolor, deserunt voluptatum accusantium enim architecto corrupti
+            fugit repellat eveniet. Sapiente!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum iusto
+            alias totam possimus odit tenetur cumque consequuntur. Et, illum!
+            Dolor, deserunt voluptatum accusantium enim architecto corrupti
+            fugit repellat eveniet. Sapiente!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum iusto
+            alias totam possimus odit tenetur cumque consequuntur. Et, illum!
+            Dolor, deserunt voluptatum accusantium enim architecto corrupti
+            fugit repellat eveniet. Sapiente!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum iusto
+            alias totam possimus odit tenetur cumque consequuntur. Et, illum!
+            Dolor, deserunt voluptatum accusantium enim architecto corrupti
+            fugit repellat eveniet. Sapiente!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum iusto
+            alias totam possimus odit tenetur cumque consequuntur. Et, illum!
+            Dolor, deserunt voluptatum accusantium enim architecto corrupti
+            fugit repellat eveniet. Sapiente!
+          </p>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum iusto
             alias totam possimus odit tenetur cumque consequuntur. Et, illum!
