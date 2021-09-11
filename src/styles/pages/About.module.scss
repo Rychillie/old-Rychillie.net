@@ -19,7 +19,11 @@
   }
 
   .containerImage {
+    width: 100%;
+    min-width: 100%;
+
     @include media(md) {
+      width: 360px;
       position: sticky;
       top: 80px;
     }
