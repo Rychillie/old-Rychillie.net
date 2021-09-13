@@ -10,6 +10,7 @@ import NavBar from "../components/navbar";
 import Header from "../components/header";
 import Card from "../components/post/card";
 import NewsLetter from "../components/NewsletterForm";
+import Footer from "../components/footer/footer";
 
 interface HomeProps {
   posts: Array<{
@@ -53,6 +54,8 @@ export default function Home(props: HomeProps) {
       </main>
 
       <NewsLetter />
+
+      <Footer />
     </>
   );
 }

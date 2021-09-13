@@ -7,6 +7,7 @@ import NavBar from "../components/navbar";
 import TagsList from "../components/post/tagsList";
 import NewsLetter from "../components/NewsletterForm";
 import Share from "../components/share";
+import Footer from "../components/footer/footer";
 
 interface PostLayoutProps {
   title: string;
@@ -91,6 +92,8 @@ export default function PostLayout(props: PostLayoutProps) {
         </main>
 
         <NewsLetter />
+
+        <Footer />
       </>
     </>
   );

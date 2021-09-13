@@ -4,6 +4,7 @@ import styles from "../styles/layouts/Page.module.scss";
 
 import NavBar from "../components/navbar";
 import NewsLetter from "../components/NewsletterForm";
+import Footer from "../components/footer/footer";
 
 interface PageLayoutProps {
   title: string;
@@ -55,6 +56,8 @@ export default function PageLayout(props: PageLayoutProps) {
         </main>
 
         <NewsLetter />
+
+        <Footer />
       </>
     </>
   );
