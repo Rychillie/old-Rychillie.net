@@ -1,1 +1,22 @@
 @import "../extras/utils";
+@import "../extras/mixins";
+@import "../variables.scss";
+
+.title {
+  color: $primary;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.17em;
+  position: relative;
+  margin-bottom: 30px;
+  width: fit-content;
+
+  &::after {
+    content: "";
+    width: 50%;
+    height: 1px;
+    background-color: $primary;
+    display: block;
+    margin-top: 8px;
+  }
+}

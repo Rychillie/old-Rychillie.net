@@ -38,6 +38,8 @@ export default function Home(props: HomeProps) {
       <Header />
 
       <main className={styles.container}>
+        <h2 className={styles.title}>Ultimas publicações:</h2>
+
         {props.posts.map((post, idx) => (
           <Card
             key={idx}
