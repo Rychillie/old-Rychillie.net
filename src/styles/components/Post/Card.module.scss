@@ -116,9 +116,13 @@
 
 .readMore {
   margin-top: 10px;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
   color: $light;
   margin-bottom: 0;
   line-height: 1.5;
+
+  @include media(md) {
+    font-size: 14px;
+  }
 }
