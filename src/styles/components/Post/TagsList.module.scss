@@ -1,3 +1,4 @@
+@import "../../extras/mixins";
 @import "../../variables.scss";
 
 .postTags {
@@ -15,5 +16,9 @@
     color: $pink;
     line-height: 1;
     margin-bottom: 10px;
+  }
+
+  @include media(md) {
+    margin-bottom: 0;
   }
 }
