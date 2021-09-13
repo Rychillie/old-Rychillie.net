@@ -6,10 +6,10 @@ import Social from "./social";
 const Footer = (): JSX.Element => {
   return (
     <footer className={styles.container}>
-      <div className={styles.menuFooter}>
+      {/* <div className={styles.menuFooter}>
         <Pages />
         <Social />
-      </div>
+      </div> */}
       <p className={styles.aboutFooter}>Feito com ❤️, Typescript e SCSS</p>
     </footer>
   );
