@@ -86,7 +86,7 @@ export default function PostLayout(props: PostLayoutProps) {
               <div dangerouslySetInnerHTML={{ __html: props.content }} />
             </article>
 
-            <div className={styles.sideMenu}></div>
+            {/* <div className={styles.sideMenu}></div> */}
           </div>
         </main>
 
