@@ -1,0 +1,37 @@
+---
+label: Conteúdo
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: textarea
+  name: description
+  label: description
+- type: text
+  name: thumbnail_bg
+  label: thumbnail_bg
+- type: text
+  name: layout
+  label: layout
+- type: datetime
+  name: date
+  label: date
+- type: file
+  name: image
+  label: image
+- type: boolean
+  name: headerImage
+  label: headerImage
+- type: list
+  name: tag
+  label: tag
+- type: boolean
+  name: star
+  label: star
+- type: text
+  name: category
+  label: category
+- type: text
+  name: author
+  label: author
