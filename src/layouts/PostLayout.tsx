@@ -51,7 +51,6 @@ export default function PostLayout(props: PostLayoutProps) {
       </Head>
       <>
         <NavBar />
-
         <header className={styles.headerPost}>
           <div className={styles.container}>
             <h1>{props.title}</h1>
@@ -74,7 +73,6 @@ export default function PostLayout(props: PostLayoutProps) {
             />
           </div>
         </header>
-
         <main className={styles.container}>
           <div className={styles.postLayout}>
             <div className={styles.socialShare}>
@@ -89,11 +87,25 @@ export default function PostLayout(props: PostLayoutProps) {
 
             {/* <div className={styles.sideMenu}></div> */}
           </div>
+
+          <div
+            className={styles.comments}
+            id="cusdis_thread"
+            data-host="https://cusdis.com"
+            data-app-id="174c745a-5e03-4827-b7d5-63a360919a9e"
+            data-page-id={props.slug}
+            data-page-url={LinkPost}
+            data-page-title={props.title}
+            data-theme="dark"
+          ></div>
         </main>
-
         <NewsLetter />
-
         <Footer />
+        <script
+          async
+          defer
+          src="https://cusdis.com/js/cusdis.es.js"
+        ></script>{" "}
       </>
     </>
   );
