@@ -4,8 +4,8 @@ description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendis
 thumbnail_bg: "#121214"
 layout: post
 date: 2016-02-24 22:44
-image: /assets/images/markdown.jpg
-headerImage: false
+image: /assets/images/flat_sand.jpg
+headerImage: true
 tag:
   - markdown
   - elements

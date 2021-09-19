@@ -15,9 +15,13 @@ export async function getAllPosts() {
         ? "http://localhost:3000"
         : "https://rychillie.net";
 
-    const thumbnailUrl = `${baseUrl}/api/thumbnail.png?title=${
+    const thumbAPI = `${baseUrl}/api/thumbnail.png?title=${
       meta.data.title
     }&thumbnail_bg=${encodeURIComponent(meta.data.thumbnail_bg)}`;
+
+    const thumbHeader = meta.data.headerImage;
+
+    const thumbnailUrl = thumbHeader ? meta.data.image : thumbAPI;
 
     posts.push({
       slug: post.replace(".md", ""),
@@ -42,9 +46,13 @@ export async function getPostBySlug(slug) {
   const meta = matter(fileContent.default);
   const content = marked(meta.content);
 
-  const thumbnailUrl = `${baseUrl}/api/thumbnail.png?title=${
+  const thumbAPI = `${baseUrl}/api/thumbnail.png?title=${
     meta.data.title
   }&thumbnail_bg=${encodeURIComponent(meta.data.thumbnail_bg)}`;
+
+  const thumbHeader = meta.data.headerImage;
+
+  const thumbnailUrl = thumbHeader ? meta.data.image : thumbAPI;
 
   return {
     title: meta.data.title,
