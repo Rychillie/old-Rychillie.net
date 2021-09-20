@@ -44,13 +44,13 @@
       }
 
       &:last-child {
-        filter: blur(16px);
         z-index: -1;
+        filter: blur(32px);
         position: absolute;
         display: block;
         width: 90%;
         left: 50%;
-        bottom: -16px;
+        bottom: 0;
         transform: translateX(-50%);
       }
     }

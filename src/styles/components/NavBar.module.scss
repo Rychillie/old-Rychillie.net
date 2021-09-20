@@ -6,9 +6,11 @@
   top: 0;
   left: 0;
   right: 0;
-  background-color: $black;
+  background-color: rgba($black, 0.5);
   position: sticky;
   z-index: 999;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .navbar {
