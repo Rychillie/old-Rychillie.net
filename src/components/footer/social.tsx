@@ -4,19 +4,19 @@ const Social = (): JSX.Element => {
   return (
     <ul className={styles.socialList}>
       <li>
-        <a href="#">Twitter</a>
+        <a href="https://twitter.com/rychillie">Twitter</a>
       </li>
       <li>
-        <a href="#">Instagram</a>
+        <a href="https://instagram.com/rychillie">Instagram</a>
       </li>
       <li>
-        <a href="#">Github</a>
+        <a href="https://github.com/rychillie">Github</a>
       </li>
       <li>
-        <a href="#">Linkedin</a>
+        <a href="https://linkedin.com/in/rychillie">Linkedin</a>
       </li>
       <li>
-        <a href="#">Dribbble</a>
+        <a href="https://dribbble.com/rychillie">Dribbble</a>
       </li>
     </ul>
   );

@@ -2,32 +2,90 @@
 @import "../../extras/mixins";
 @import "../../variables.scss";
 
-.menuFooter {
-  width: 100%;
+.contentFooter {
   display: flex;
   flex-direction: column;
 
+  @include media(sm) {
+    flex-direction: row;
+  }
+}
+
+.apresentation {
+  width: 100%;
+  display: inline-flex;
+  flex-direction: column;
+
+  h3 {
+    text-align: center;
+    font-size: 26px;
+    line-height: 2;
+    margin-bottom: 8px;
+  }
+
+  @include media(sm) {
+    flex-direction: column;
+    width: 40%;
+
+    h3 {
+      text-align: left;
+    }
+
+    ul {
+      justify-content: flex-start;
+    }
+  }
+
+  @include media(md) {
+    width: 50%;
+  }
+}
+
+.menuFooter {
+  width: 100%;
+  display: inline-flex;
+  flex-direction: row;
+
   ul {
+    margin-top: 32px;
     list-style-type: none;
     flex: 1;
 
     li {
-      & + li {
-        margin-top: 8px;
-      }
+      display: inline-flex;
+      justify-content: center;
+      flex-direction: row;
+      margin-top: 16px;
+      flex-wrap: wrap;
+      width: 50%;
 
       a {
-        opacity: 1;
+        color: $primary;
+        opacity: 0.72;
 
         &:hover {
-          opacity: 0.72;
+          color: $pink;
+          opacity: 1;
         }
       }
     }
   }
 
   @include media(sm) {
-    flex-direction: row;
+    flex-direction: column;
+    width: 60%;
+
+    ul {
+      margin-top: 0;
+
+      li {
+        justify-content: flex-start;
+      }
+    }
+  }
+
+  @include media(md) {
+    width: 50%;
   }
 }
 
