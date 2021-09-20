@@ -1,0 +1,18 @@
+{
+  "name": "🦄 Rychillie",
+  "short_name": "Rychillie",
+  "theme_color": "#0c0c0c",
+  "background_color": "#0c0c0c",
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "scope": "/",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "/android-chrome-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    }
+  ],
+  "splash_pages": null
+}
