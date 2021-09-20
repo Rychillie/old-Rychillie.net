@@ -2,12 +2,16 @@
 @import "../extras/utils";
 @import "../variables.scss";
 
+.container {
+  padding: 0;
+}
+
 .form {
   margin-top: 64px;
   margin-bottom: 64px;
   background-color: rgba($primary, 0.025);
   border-radius: 4px;
-  padding: 40px;
+  padding: 24px;
   width: 100%;
 
   @include media(sm) {
