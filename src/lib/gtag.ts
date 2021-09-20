@@ -1,10 +1,10 @@
-export const GA_TRACKING_ID = "UA-45575876-4";
-
 declare global {
   interface Window {
     gtag: (...args: any[]) => void;
   }
 }
+
+export const GA_TRACKING_ID = "UA-45575876-4";
 
 // https://developers.google.com/analytics/devguides/collection/gtagjs/pages
 export const pageview = (url) => {
