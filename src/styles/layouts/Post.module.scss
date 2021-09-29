@@ -107,6 +107,20 @@
       max-width: 100%;
       width: 100%;
     }
+
+    img {
+      width: 100%;
+      display: block;
+
+      @include media(sm) {
+        max-width: 75%;
+        margin: 0 auto;
+      }
+
+      @include media(md) {
+        max-width: 60%;
+      }
+    }
   }
 
   .sideMenu {
