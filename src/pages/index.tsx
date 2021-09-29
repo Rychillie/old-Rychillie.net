@@ -1,6 +1,3 @@
-import type { NextPage } from "next";
-import Head from "next/head";
-
 import thumbnail from "./api/thumbnail";
 import { getAllPosts } from "./api/posts";
 
@@ -20,6 +17,9 @@ interface HomeProps {
     description: string;
     thumbnailUrl: string;
     tags: string[];
+    postDay: string;
+    postMonth: string;
+    postID: string;
   }>;
 }
 
@@ -40,14 +40,16 @@ export default function Home(props: HomeProps) {
       <main className={styles.container}>
         <h2 className={styles.title}>Ultimas publicações:</h2>
 
-        {props.posts.map((post, idx) => (
+        {props.posts.map((post) => (
           <Card
-            key={idx}
+            key={post.postID}
             postLink={post.slug}
             title={post.title}
             description={post.description}
             thumbnailUrl={post.thumbnailUrl}
             tags={post.tags}
+            postDay={post.postDay}
+            postMonth={post.postMonth}
           />
         ))}
       </main>

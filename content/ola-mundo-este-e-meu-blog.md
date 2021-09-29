@@ -1,9 +1,11 @@
 ---
+postID: "0000001"
 title: "Olá Mundo, este é meu blog!"
 description: "Conheça o meu espaço para compartilhar trabalhos, estudos, conhecimento e marcar minha presença na web de uma forma que faça a diferança para as pessoas."
 thumbnail_bg: "#b0b0cf"
 layout: post
-date: 2021-09-29 07:30
+postDay: "29"
+postMonth: "Set"
 image: /assets/images/book-on-notebook.png
 headerImage: true
 tag:

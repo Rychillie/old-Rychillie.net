@@ -8,6 +8,8 @@ interface LinkProps {
   postLink: string;
   title: string;
   tags: string[];
+  postMonth: string;
+  postDay: string;
 }
 
 import TagsList from "./tagsList";
@@ -18,8 +20,8 @@ const Card = (props: LinkProps): JSX.Element => {
       <a className={styles.post}>
         <div className={styles.dateThumb}>
           <div className={styles.date}>
-            <span className={styles.day}>28</span>
-            <span className={styles.month}>Feb</span>
+            <span className={styles.day}>{props.postDay}</span>
+            <span className={styles.month}>{props.postMonth}</span>
           </div>
           <div className={styles.thumb}>
             <Image
