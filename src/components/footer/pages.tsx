@@ -5,32 +5,32 @@ const Pages = (): JSX.Element => {
   return (
     <ul className={styles.pagesList}>
       <li>
-        <Link href="/">
+        <Link href="/em-construcao">
           <a>Publicações</a>
         </Link>
       </li>
       <li>
-        <Link href="/">
+        <Link href="/em-construcao">
           <a>Artigos</a>
         </Link>
       </li>
       <li>
-        <Link href="/">
+        <Link href="/em-construcao">
           <a>Portfólio</a>
         </Link>
       </li>
       <li>
-        <Link href="/">
+        <Link href="/em-construcao">
           <a>Promoções</a>
         </Link>
       </li>
       <li>
-        <Link href="/">
+        <Link href="/em-construcao">
           <a>Apoiadores</a>
         </Link>
       </li>
       <li>
-        <Link href="/">
+        <Link href="/em-construcao">
           <a>Links</a>
         </Link>
       </li>

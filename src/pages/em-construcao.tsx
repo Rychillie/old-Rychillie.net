@@ -1,10 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
-import styles from "../styles/pages/404.module.scss";
+import styles from "../styles/pages/em-construcao.module.scss";
 
 import PageLayout from "../layouts/PageLayout";
 
-interface Page404Props {
+interface emContrucaoProps {
   posts: Array<{
     slug: string;
     title: string;
@@ -14,20 +14,20 @@ interface Page404Props {
   }>;
 }
 
-export default function page404(props: Page404Props) {
+export default function emContrucao(props: emContrucaoProps) {
   return (
     <PageLayout
-      title={"404 - Não Encontrado"}
-      description={"Opps, Pagina não encontrada"}
-      image={"/images/system-error.png"}
+      title={"Página em contrução"}
+      description={"Calma ae, ta quase pronto!"}
+      image={"/images/unfinished_horse.png"}
     >
       <div className={styles.doubleContent}>
         <div className={styles.sideImage}>
           <div className={styles.containerImage}>
             <Image
-              src={"/images/system-error.png"}
-              blurDataURL={"/images/system-error.png"}
-              alt="system-error"
+              src={"/images/unfinished_horse.png"}
+              blurDataURL={"/images/unfinished_horse.png"}
+              alt="unfinished horse"
               layout="responsive"
               placeholder="blur"
               quality={100}
@@ -39,14 +39,10 @@ export default function page404(props: Page404Props) {
         </div>
         <div className={styles.sideContent}>
           <h2>
-            Ops, parece que essa página não existe.
+            Está pagina está em contrução.
             <br />
-            Ou apenas não está no lugar certo.
+            Logo estará pronto!
           </h2>
-          <br />
-          <Link href="/">
-            <a className={styles.button}>Pagina Inicial</a>
-          </Link>
         </div>
       </div>
     </PageLayout>
