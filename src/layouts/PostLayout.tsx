@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
-import Head from "next/head";
 import thumbnail from "../pages/api/thumbnail";
 import styles from "../styles/layouts/Post.module.scss";
 
+import HeadContent from "../components/Head";
 import NavBar from "../components/navbar";
 import TagsList from "../components/post/tagsList";
 import NewsLetter from "../components/NewsletterForm";
@@ -23,32 +23,11 @@ export default function PostLayout(props: PostLayoutProps) {
 
   return (
     <>
-      <Head>
-        <title>{props.title}</title>
-        <meta
-          name="description"
-          content={`${props.description} | rychillie.net`}
-        />
-        <link rel="icon" href="/favicon.ico" />
-
-        <meta name="description" content={props.description} />
-
-        <meta property="og:site_name" content="🦄 Rychillie" />
-
-        <meta property="og:title" content={props.title} />
-        <meta property="og:description" content={props.description} />
-
-        <meta property="og:image" content={props.thumbnailUrl} />
-        <meta property="og:image:type" content="image/png" />
-
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={props.title} />
-        <meta name="twitter:description" content={props.description} />
-        <meta name="twitter:image" content={props.thumbnailUrl} />
-      </Head>
+      <HeadContent
+        title={props.title}
+        description={props.description}
+        image={props.thumbnailUrl}
+      />
       <>
         <NavBar />
         <header className={styles.headerPost}>
