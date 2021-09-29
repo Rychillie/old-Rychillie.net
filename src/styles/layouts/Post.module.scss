@@ -121,6 +121,15 @@
         max-width: 60%;
       }
     }
+
+    a {
+      color: $pink;
+      opacity: 1;
+
+      &:hover {
+        opacity: 0.64;
+      }
+    }
   }
 
   .sideMenu {

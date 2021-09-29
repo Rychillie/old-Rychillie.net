@@ -13,7 +13,7 @@ interface AboutProps {
   }>;
 }
 
-export default function Home(props: AboutProps) {
+export default function About(props: AboutProps) {
   return (
     <PageLayout
       title={"Conheça-me"}
