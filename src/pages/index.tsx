@@ -6,6 +6,7 @@ import { getAllPosts } from "./api/posts";
 
 import styles from "../styles/pages/Home.module.scss";
 
+import HeadContent from "../components/Head";
 import NavBar from "../components/navbar";
 import Header from "../components/header";
 import Card from "../components/post/card";
@@ -23,34 +24,14 @@ interface HomeProps {
 }
 
 export default function Home(props: HomeProps) {
-  const title = "Página inicial | rychillie.net";
+  const title = "Página inicial";
   const description =
     "Desenvolvedor Frontend, estudante de UI/UX Design e criador de conteúdo, compartilhando seu conhecimento com a comunidade.";
   const image = "/unicorn.png";
 
   return (
     <>
-      <Head>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <link rel="icon" href="/favicon.ico" />
-
-        <meta property="og:site_name" content="🦄 Rychillie" />
-
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-
-        <meta property="og:image" content={image} />
-        <meta property="og:image:type" content="image/png" />
-
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="1200" />
-
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={image} />
-      </Head>
+      <HeadContent title={title} description={description} image={image} />
 
       <NavBar />
 
