@@ -130,6 +130,20 @@
         opacity: 0.64;
       }
     }
+
+    p {
+      code {
+        display: inline-block;
+        width: fit-content;
+        padding: 4px 8px;
+        border-radius: 4px;
+        background: #1b1b1b;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 1.5;
+        margin: 0 4px -9px;
+      }
+    }
   }
 
   .sideMenu {
