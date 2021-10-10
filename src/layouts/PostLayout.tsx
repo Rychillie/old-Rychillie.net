@@ -1,6 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 import thumbnail from "../pages/api/thumbnail";
+import { useEffect } from "react";
 import styles from "../styles/layouts/Post.module.scss";
+import Prism from "prismjs";
+import "prismjs/components/prism-javascript";
+import "prismjs/components/prism-bash";
 
 import HeadContent from "../components/Head";
 import NavBar from "../components/navbar";
@@ -20,6 +24,12 @@ interface PostLayoutProps {
 
 export default function PostLayout(props: PostLayoutProps) {
   const LinkPost = `https://rychillie.net/` + props.slug;
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      Prism.highlightAll();
+    }
+  }, []);
 
   return (
     <>

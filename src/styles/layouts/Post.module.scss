@@ -108,6 +108,25 @@
       width: 100%;
     }
 
+    pre {
+      background-color: #1e1e1e;
+      border-radius: 4px;
+      overflow: auto;
+      font-size: 14px;
+      margin-bottom: 4.1rem;
+      padding: 2.8rem 1.4rem 1.6rem;
+      border-radius: 12px;
+      overflow: hidden;
+      background-image: url("/assets/window-buttons.png");
+      background-repeat: no-repeat;
+      background-size: 44px 10px;
+      background-position: 16px 14px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
     img {
       width: 100%;
       display: block;
