@@ -43,6 +43,10 @@
     display: none;
   }
 
+  .thumb img {
+    object-fit: cover;
+  }
+
   @include media(sm) {
     position: relative;
     margin-bottom: 0;
@@ -87,10 +91,6 @@
       height: 170px;
       position: absolute;
       top: -100%;
-
-      img {
-        object-fit: cover;
-      }
     }
   }
 }
