@@ -17,4 +17,10 @@ star: false
 category: blog
 ---
 
-Para começar, vamos instalando Sass, sejá ele usando o gerenciador de pacotes NPM:`npm i sass` ou através do gerenciador de pacotes Yarn: `yarn add sass` e vamos adicionar o Node Sass, para garantir um processamento. Sejá com NPM `npm i node-sass`, ou com Yarn `yarn add node-sass`
+SASS ou SCSS é uma das melhores alternativas no meio dos seletores SCSS. Nele você consegue ter um controle maior do seu código CSS, e também pode usar o CSS-in-JS para criar estilos dinâmicos, muito utilizado em Frameworks como Boostrap. Por isso e muito mais ele foi minha escolha para estilização no meu blog. E por isso venho compartilhar o meu processo para instalação e utilização do SCSS/SASS em projetos NextJS.
+
+```bash
+npm i sass
+// or
+npm i node-sass
+```
