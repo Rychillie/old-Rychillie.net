@@ -72,7 +72,7 @@ export async function getPostBySlug(slug) {
 
 export async function getAllPromos() {
   const context = require.context("../../../content/promos/", false, /\.md$/);
-  const posts = [];
+  const promos = [];
 
   for (const key of context.keys()) {
     const post = key.slice(2);
@@ -92,7 +92,7 @@ export async function getAllPromos() {
 
     const thumbnailUrl = thumbHeader ? meta.data.image : thumbAPI;
 
-    posts.push({
+    promos.push({
       slug: post.replace(".md", ""),
       title: meta.data.title,
       description: meta.data.description,
@@ -104,7 +104,7 @@ export async function getAllPromos() {
     });
   }
 
-  return posts;
+  return promos;
 }
 
 export async function getPromoBySlug(slug) {
