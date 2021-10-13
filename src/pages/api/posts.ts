@@ -96,10 +96,10 @@ export async function getAllPromos() {
       slug: post.replace(".md", ""),
       title: meta.data.title,
       description: meta.data.description,
-      postMonth: meta.data.postMonth,
-      postDay: meta.data.postDay,
       postID: meta.data.postID,
-      tags: meta.data.tag,
+      price: meta.data.price,
+      store: meta.data.store,
+      linkPromo: meta.data.linkPromo,
       thumbnailUrl,
     });
   }
@@ -129,10 +129,10 @@ export async function getPromoBySlug(slug) {
   return {
     title: meta.data.title,
     description: meta.data.description,
-    postMonth: meta.data.postMonth,
-    postDay: meta.data.postDay,
     postID: meta.data.postID,
-    tags: meta.data.tag,
+    price: meta.data.price,
+    store: meta.data.store,
+    linkPromo: meta.data.linkPromo,
     thumbnailUrl,
     content,
     slug,
