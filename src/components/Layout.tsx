@@ -1,9 +1,9 @@
 import React, { ReactNode } from "react";
 import { NextSeo } from "next-seo";
 import { motion } from "framer-motion";
-import Header from "./Header";
-
 import styles from "../styles/components/Layout.module.scss";
+
+import Header from "./Header";
 
 type Props = {
   children: ReactNode;
