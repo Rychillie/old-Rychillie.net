@@ -2,7 +2,7 @@ import Image from "next/image";
 import styles from "../styles/pages/Promos.module.scss";
 import { getAllPromos } from "./api/posts";
 
-import PageLayout from "../layouts/PageLayout";
+import Layout from "../components/Layout";
 import CardPromo from "../components/post/cardPromo";
 
 interface PromosProps {
@@ -26,12 +26,12 @@ interface PromosProps {
 
 export default function About(props: PromosProps) {
   return (
-    <PageLayout
+    <Layout
       title={"Promoções"}
       description={
         "Compre produtos no meu link, sem gastar nada mais e me ajude a pagar um boletinho!"
       }
-      image={""}
+      mainPrimary={true}
     >
       <div className={styles.listPromos}>
         {props.promos.map((promos) => (
@@ -45,7 +45,7 @@ export default function About(props: PromosProps) {
           />
         ))}
       </div>
-    </PageLayout>
+    </Layout>
   );
 }
 

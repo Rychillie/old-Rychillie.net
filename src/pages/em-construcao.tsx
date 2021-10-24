@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "../styles/pages/em-construcao.module.scss";
 
-import PageLayout from "../layouts/PageLayout";
+import Layout from "../components/Layout";
 
 interface emContrucaoProps {
   posts: Array<{
@@ -16,10 +16,11 @@ interface emContrucaoProps {
 
 export default function emContrucao(props: emContrucaoProps) {
   return (
-    <PageLayout
+    <Layout
       title={"Página em contrução"}
       description={"Calma ae, ta quase pronto!"}
-      image={"/images/unfinished_horse.png"}
+      // image={"/images/unfinished_horse.png"}
+      mainPrimary={true}
     >
       <div className={styles.doubleContent}>
         <div className={styles.sideImage}>
@@ -45,6 +46,6 @@ export default function emContrucao(props: emContrucaoProps) {
           </h2>
         </div>
       </div>
-    </PageLayout>
+    </Layout>
   );
 }

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "../styles/pages/Uses.module.scss";
 
-import PageLayout from "../layouts/PageLayout";
+import Layout from "../components/Layout";
 
 interface AboutProps {
   posts: Array<{
@@ -15,12 +15,12 @@ interface AboutProps {
 
 export default function Home(props: AboutProps) {
   return (
-    <PageLayout
+    <Layout
       title={"Uses"}
       description={
         "Aqui você encontra software e hardware que me ajudam a ser mais produtivo."
       }
-      image={""}
+      mainPrimary={true}
     >
       <div className={styles.doubleContent}>
         <div className={styles.sideImage}>
@@ -220,6 +220,6 @@ export default function Home(props: AboutProps) {
           </p>
         </div>
       </div>
-    </PageLayout>
+    </Layout>
   );
 }

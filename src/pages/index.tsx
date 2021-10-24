@@ -1,14 +1,12 @@
+import React from "react";
 import thumbnail from "./api/thumbnail";
 import { getAllPosts } from "./api/posts";
 
 import styles from "../styles/pages/Home.module.scss";
 
-import HeadContent from "../components/Head";
-import NavBar from "../components/navbar";
-import Header from "../components/header";
+import Layout from "../components/Layout";
 import Card from "../components/post/card";
-import NewsLetter from "../components/NewsletterForm";
-import Footer from "../components/footer/footer";
+import Header from "../components/Header";
 
 interface HomeProps {
   posts: Array<{
@@ -30,13 +28,7 @@ export default function Home(props: HomeProps) {
   const image = "/unicorn.png";
 
   return (
-    <>
-      <HeadContent title={title} description={description} image={image} />
-
-      <NavBar />
-
-      <Header />
-
+    <Layout title={title} description={description} headerPrimary={true}>
       <main className={styles.container}>
         <h2 className={styles.title}>Ultimas publicações:</h2>
 
@@ -53,11 +45,7 @@ export default function Home(props: HomeProps) {
           />
         ))}
       </main>
-
-      <NewsLetter />
-
-      <Footer />
-    </>
+    </Layout>
   );
 }
 

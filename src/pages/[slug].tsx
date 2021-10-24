@@ -1,7 +1,13 @@
-import React from "react";
-import PostLayout from "../layouts/PostLayout";
+/* eslint-disable @next/next/no-img-element */
+import React, { useEffect } from "react";
+import Prism from "prismjs";
+import Layout from "../components/Layout";
 import { getPostBySlug, getAllPosts } from "./api/posts";
 import { GetStaticPropsContext } from "next";
+import styles from "../styles/layouts/Post.module.scss";
+
+import TagsList from "../components/post/tagsList";
+import Share from "../components/share";
 
 interface PostProps {
   title: string;
@@ -13,15 +19,56 @@ interface PostProps {
 }
 
 export default function Post(props: PostProps) {
+  const LinkPost = `https://rychillie.net/` + props.slug;
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      Prism.highlightAll();
+    }
+  }, []);
+
   return (
-    <PostLayout
+    <Layout
       title={props.title}
       description={props.description}
-      thumbnailUrl={props.thumbnailUrl}
-      content={props.content}
-      tags={props.tags}
-      slug={props.slug}
-    />
+      headerPrimary={false}
+    >
+      <div className={styles.headerPost}>
+        <div className={styles.container}>
+          <TagsList tags={props.tags} />
+        </div>
+
+        <div className={styles.thumbnail}>
+          <img
+            width="1170"
+            src={props.thumbnailUrl}
+            alt={props.title}
+            loading="lazy"
+          />
+          <img
+            width="1170"
+            src={props.thumbnailUrl}
+            alt={props.title}
+            loading="lazy"
+          />
+        </div>
+      </div>
+      <div className={styles.container}>
+        <div className={styles.postLayout}>
+          <div className={styles.socialShare}>
+            <span>compartilhe</span>
+
+            <Share title={props.title} LinkPost={LinkPost} />
+          </div>
+
+          <article className={styles.article}>
+            <div dangerouslySetInnerHTML={{ __html: props.content }} />
+          </article>
+
+          {/* <div className={styles.sideMenu}></div> */}
+        </div>
+      </div>
+    </Layout>
   );
 }
 

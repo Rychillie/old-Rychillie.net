@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "../styles/pages/About.module.scss";
 
-import PageLayout from "../layouts/PageLayout";
+import Layout from "../components/Layout";
 
 interface AboutProps {
   posts: Array<{
@@ -15,10 +15,10 @@ interface AboutProps {
 
 export default function About(props: AboutProps) {
   return (
-    <PageLayout
+    <Layout
       title={"Conheça-me"}
       description={"Conheça quem sou e um pouco da minha vida"}
-      image={""}
+      mainPrimary={true}
     >
       <div className={styles.doubleContent}>
         <div className={styles.sideImage}>
@@ -96,6 +96,6 @@ export default function About(props: AboutProps) {
           </p>
         </div>
       </div>
-    </PageLayout>
+    </Layout>
   );
 }

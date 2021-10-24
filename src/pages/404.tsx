@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "../styles/pages/404.module.scss";
 
-import PageLayout from "../layouts/PageLayout";
+import Layout from "../components/Layout";
 
 interface Page404Props {
   posts: Array<{
@@ -16,10 +16,11 @@ interface Page404Props {
 
 export default function page404(props: Page404Props) {
   return (
-    <PageLayout
+    <Layout
       title={"404 - Não Encontrado"}
       description={"Opps, Pagina não encontrada"}
-      image={"/images/system-error.png"}
+      // image={"/images/system-error.png"}
+      mainPrimary={true}
     >
       <div className={styles.doubleContent}>
         <div className={styles.sideImage}>
@@ -49,6 +50,6 @@ export default function page404(props: Page404Props) {
           </Link>
         </div>
       </div>
-    </PageLayout>
+    </Layout>
   );
 }

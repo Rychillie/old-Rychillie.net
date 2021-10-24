@@ -11,6 +11,8 @@
   "dependencies": {
     "@types/prismjs": "^1.16.6",
     "chrome-aws-lambda": "^10.1.0",
+    "framer-motion": "^4.1.17",
+    "next-seo": "^4.28.1",
     "next": "11.1.1",
     "prismjs": "^1.25.0",
     "puppeteer-core": "^10.2.0",

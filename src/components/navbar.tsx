@@ -1,6 +1,29 @@
 import Image from "next/image";
-import Link from "next/link";
+import { AnimateSharedLayout } from "framer-motion";
 import styles from "../styles/components/NavBar.module.scss";
+import Link, { LinkProps } from "next/link";
+import React, { ReactNode } from "react";
+
+interface IProps extends LinkProps {
+  children: ReactNode;
+}
+
+const links: { name: string; href: string }[] = [
+  {
+    name: "Blog",
+    href: "/blog",
+  },
+  {
+    name: "Portfolio",
+    href: "/portfolio",
+  },
+];
+
+const NavLink = ({ children, href, passHref }: IProps): JSX.Element => (
+  <Link href={href} passHref={passHref} scroll={false}>
+    {children}
+  </Link>
+);
 
 const NavBar = () => {
   return (
@@ -12,31 +35,27 @@ const NavBar = () => {
               <span>🦄 Rychillie</span>
             </a>
           </Link>
-          <ul className={styles.navbarLinks}>
-            {/* <li>
-            <Link href="/">
-              <a>Blog</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/">
-              <a>Portfólio</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/">
-              <a>Contato</a>
-            </Link>
-          </li> */}
-            <li>
-              <Link href="/about">
-                <a>Sobre</a>
-              </Link>
-            </li>
-          </ul>
+
+          <Navigation />
         </div>
       </div>
     </nav>
+  );
+};
+
+const Navigation = (): JSX.Element => {
+  return (
+    <AnimateSharedLayout>
+      <ul className={styles.navbarLinks}>
+        {links.map(({ name, href }) => (
+          <li key={name}>
+            <NavLink href={href}>
+              <a>{name}</a>
+            </NavLink>
+          </li>
+        ))}
+      </ul>
+    </AnimateSharedLayout>
   );
 };
 
