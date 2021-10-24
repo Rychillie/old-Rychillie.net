@@ -3,7 +3,7 @@ import { NextSeo } from "next-seo";
 import { motion } from "framer-motion";
 import styles from "../styles/components/Layout.module.scss";
 
-import Header from "./Header";
+import Header from "./header";
 
 type Props = {
   children: ReactNode;

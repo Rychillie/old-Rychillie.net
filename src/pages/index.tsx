@@ -6,7 +6,7 @@ import styles from "../styles/pages/Home.module.scss";
 
 import Layout from "../components/Layout";
 import Card from "../components/post/card";
-import Header from "../components/Header";
+import Header from "../components/header";
 
 interface HomeProps {
   posts: Array<{

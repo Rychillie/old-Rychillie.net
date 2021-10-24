@@ -7,7 +7,7 @@ import { DefaultSeo } from "next-seo";
 import { AnimatePresence } from "framer-motion";
 
 import NavBar from "../components/Navbar";
-import Header from "../components/Header";
+import Header from "../components/header";
 import NewsLetter from "../components/NewsletterForm";
 import Footer from "../components/footer/footer";
 
