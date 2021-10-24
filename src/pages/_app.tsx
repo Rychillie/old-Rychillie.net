@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 import { DefaultSeo } from "next-seo";
 import { AnimatePresence } from "framer-motion";
 
-import NavBar from "../components/Navbar";
+import NavBar from "../components/navbar";
 import Header from "../components/header";
 import NewsLetter from "../components/NewsletterForm";
 import Footer from "../components/footer/footer";
