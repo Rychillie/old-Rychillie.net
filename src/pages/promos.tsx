@@ -31,7 +31,6 @@ export default function About(props: PromosProps) {
       description={
         "Compre produtos no meu link, sem gastar nada mais e me ajude a pagar um boletinho!"
       }
-      mainPrimary={true}
     >
       <div className={styles.listPromos}>
         {props.promos.map((promos) => (

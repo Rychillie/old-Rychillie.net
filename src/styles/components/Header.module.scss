@@ -1,9 +1,25 @@
 @import "../extras/mixins";
+@import "../extras/utils";
 @import "../variables.scss";
 
 .header {
   width: 100%;
   height: auto;
+}
+
+.titlePage {
+  font-size: 40px;
+  line-height: 1.5;
+  margin-top: 24px;
+  margin-bottom: 24px;
+
+  @include media(sm) {
+    margin-bottom: 32px;
+  }
+
+  @include media(md) {
+    margin-bottom: 48px;
+  }
 }
 
 .apresentation {

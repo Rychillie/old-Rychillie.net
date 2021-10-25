@@ -28,11 +28,7 @@ export default function Post(props: PostProps) {
   }, []);
 
   return (
-    <Layout
-      title={props.title}
-      description={props.description}
-      headerPrimary={false}
-    >
+    <Layout title={props.title} description={props.description}>
       <div className={styles.headerPost}>
         <div className={styles.container}>
           <TagsList tags={props.tags} />

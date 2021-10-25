@@ -20,7 +20,6 @@ export default function page404(props: Page404Props) {
       title={"404 - Não Encontrado"}
       description={"Opps, Pagina não encontrada"}
       // image={"/images/system-error.png"}
-      mainPrimary={true}
     >
       <div className={styles.doubleContent}>
         <div className={styles.sideImage}>

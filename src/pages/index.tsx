@@ -28,23 +28,21 @@ export default function Home(props: HomeProps) {
   const image = "/unicorn.png";
 
   return (
-    <Layout title={title} description={description} headerPrimary={true}>
-      <div className={styles.container}>
-        <h2 className={styles.title}>Ultimas publicações:</h2>
+    <Layout title={title} description={description} headerApresentation={true}>
+      <h2 className={styles.title}>Ultimas publicações:</h2>
 
-        {props.posts.map((post) => (
-          <Card
-            key={post.postID}
-            postLink={post.slug}
-            title={post.title}
-            description={post.description}
-            thumbnailUrl={post.thumbnailUrl}
-            tags={post.tags}
-            postDay={post.postDay}
-            postMonth={post.postMonth}
-          />
-        ))}
-      </div>
+      {props.posts.map((post) => (
+        <Card
+          key={post.postID}
+          postLink={post.slug}
+          title={post.title}
+          description={post.description}
+          thumbnailUrl={post.thumbnailUrl}
+          tags={post.tags}
+          postDay={post.postDay}
+          postMonth={post.postMonth}
+        />
+      ))}
     </Layout>
   );
 }

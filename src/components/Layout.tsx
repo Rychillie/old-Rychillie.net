@@ -9,8 +9,7 @@ type Props = {
   children: ReactNode;
   title: string;
   description: string;
-  headerPrimary?: boolean | false;
-  mainPrimary?: boolean | false;
+  headerApresentation?: boolean | false;
 };
 
 const variants = {
@@ -23,10 +22,11 @@ const Layout = ({
   children,
   title,
   description,
-  headerPrimary,
-  mainPrimary,
+  headerApresentation,
 }: Props): JSX.Element => (
   <>
+    <Header headerApresentation={headerApresentation} title={title} />
+
     <NextSeo
       title={title}
       description={description}
@@ -39,23 +39,7 @@ const Layout = ({
       variants={variants}
       transition={{ type: "linear" }}
     >
-      {headerPrimary ? (
-        <Header />
-      ) : (
-        <header className={styles.headerPage}>
-          <div className={styles.container}>
-            <h1>{title}</h1>
-          </div>
-        </header>
-      )}
-
-      {mainPrimary ? (
-        <div className={styles.container}>
-          <div className={styles.pageLayout}>{children}</div>
-        </div>
-      ) : (
-        <>{children}</>
-      )}
+      <div className={styles.container}>{children}</div>
     </motion.main>
   </>
 );

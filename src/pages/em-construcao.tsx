@@ -19,8 +19,7 @@ export default function emContrucao(props: emContrucaoProps) {
     <Layout
       title={"Página em contrução"}
       description={"Calma ae, ta quase pronto!"}
-      // image={"/images/unfinished_horse.png"}
-      mainPrimary={true}
+      // image={"/images/unfinished_horse.png"}}
     >
       <div className={styles.doubleContent}>
         <div className={styles.sideImage}>

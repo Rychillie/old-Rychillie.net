@@ -6,15 +6,17 @@ import { useRouter } from "next/router";
 import { DefaultSeo } from "next-seo";
 import { AnimatePresence } from "framer-motion";
 
-import NavBar from "../components/navbar";
-import Header from "../components/header";
 import NewsLetter from "../components/NewsletterForm";
 import Footer from "../components/footer/footer";
 
 import * as gtag from "../lib/gtag";
 import Analytics from "../components/Analytics";
 
-function MyApp({ Component, pageProps, router }: AppProps) {
+type myProps = AppProps & {
+  headerApresentation?: boolean | false;
+};
+
+function MyApp({ Component, pageProps, router, headerApresentation }: myProps) {
   const url = `https://rychillie.net${router.route}`;
   const myRouter = useRouter();
 
@@ -45,7 +47,6 @@ function MyApp({ Component, pageProps, router }: AppProps) {
         }}
         canonical={url}
       />
-      <NavBar />
 
       <AnimatePresence
         exitBeforeEnter

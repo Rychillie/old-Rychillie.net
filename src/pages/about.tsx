@@ -18,7 +18,6 @@ export default function About(props: AboutProps) {
     <Layout
       title={"Conheça-me"}
       description={"Conheça quem sou e um pouco da minha vida"}
-      mainPrimary={true}
     >
       <div className={styles.doubleContent}>
         <div className={styles.sideImage}>

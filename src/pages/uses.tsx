@@ -20,7 +20,6 @@ export default function Home(props: AboutProps) {
       description={
         "Aqui você encontra software e hardware que me ajudam a ser mais produtivo."
       }
-      mainPrimary={true}
     >
       <div className={styles.doubleContent}>
         <div className={styles.sideImage}>
