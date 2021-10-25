@@ -29,7 +29,7 @@ export default function Home(props: HomeProps) {
 
   return (
     <Layout title={title} description={description} headerPrimary={true}>
-      <main className={styles.container}>
+      <div className={styles.container}>
         <h2 className={styles.title}>Ultimas publicações:</h2>
 
         {props.posts.map((post) => (
@@ -44,7 +44,7 @@ export default function Home(props: HomeProps) {
             postMonth={post.postMonth}
           />
         ))}
-      </main>
+      </div>
     </Layout>
   );
 }
