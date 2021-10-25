@@ -1,11 +1,7 @@
 import { AnimateSharedLayout } from "framer-motion";
 import styles from "../../styles/components/Footer/Footer.module.scss";
-import Link, { LinkProps } from "next/link";
+import Link from "../NoScrollLink";
 import React, { ReactNode } from "react";
-
-interface IProps extends LinkProps {
-  children: ReactNode;
-}
 
 const links: { name: string; href: string }[] = [
   {
@@ -38,21 +34,15 @@ const links: { name: string; href: string }[] = [
   },
 ];
 
-const NavLink = ({ children, href, passHref }: IProps): JSX.Element => (
-  <Link href={href} passHref={passHref} scroll={false}>
-    {children}
-  </Link>
-);
-
 const Pages = (): JSX.Element => {
   return (
     <AnimateSharedLayout>
       <ul className={styles.pagesList}>
         {links.map(({ name, href }) => (
           <li key={name}>
-            <NavLink href={href}>
+            <Link href={href}>
               <a>{name}</a>
-            </NavLink>
+            </Link>
           </li>
         ))}
       </ul>

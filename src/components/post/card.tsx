@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import Link from "../NoScrollLink";
 import styles from "../../styles/components/Post/Card.module.scss";
 
 interface LinkProps {
